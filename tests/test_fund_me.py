@@ -5,6 +5,15 @@ from scripts.deploy import deploy_fund_me
 
 # To create a mainnet for using brownie:
 # brownie networks add development mainnet-fork-dev cmd=ganache-cli host=http://127.0.0.1 fork=https://eth-mainnet.g.alchemy.com/v2/XR71RJjHXO12jAVZnUEYGG1QAD0UOFGv accounts=10 mnemonic=brownie port=8545
+
+# WHERE SHOULD I RUN MY TESTS?
+# 1) Brownie Ganache Chain with Mocks: ALWAYS
+# 2) Testnet: ALWAYS (but only for integration testing)
+# 3) Brownie mainnet-fork: OPTIONAL
+# 4) Custom mainnet-fork: OPTIONAL
+# 5) Self/Local Ganache: NOT NECESSARY, but good for tinkering
+
+
 def test_can_fund_and_withdraw():
     account = get_account()
     fund_me = deploy_fund_me()
